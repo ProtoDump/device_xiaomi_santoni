@@ -1,4 +1,6 @@
-# Copyright (c) 2009-2012, 2014-2017, The Linux Foundation. All rights reserved.
+#! /vendor/bin/sh
+
+# Copyright (c) 2009-2016, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -25,22 +27,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on boot
-    start baseband-sh
-
-service baseband-sh /vendor/bin/sh /vendor/etc/set_baseband.sh
-    class late_start
-    user root
-    oneshot
-    disabled
-
-#start camera server as daemon
-service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
-    class late_start
-    user camera
-    group camera system inet input graphics
-
-service goodix_script /vendor/bin/init.goodix.sh
-    class late_start
-    user system
-    oneshot
+if [ ! -f /data/system/users/0/settings_fingerprint.xml ] || ! grep "fingerId" /data/system/users/0/settings_fingerprint.xml > /dev/null; then
+    rm -rf /mnt/vendor/persist/data/gxfp/0_0
+fi
