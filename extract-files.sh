@@ -19,7 +19,9 @@
 set -e
 
 export DEVICE=santoni
-export VENDOR=xiaomi
-export DEVICE_COMMON=msm8937-common
+export DEVICE_BRINGUP_YEAR=2016
+
+DEVICE_COMMON=msm8937-common
+VENDOR=xiaomi
 
 ./../../$VENDOR/$DEVICE_COMMON/extract-files.sh $@

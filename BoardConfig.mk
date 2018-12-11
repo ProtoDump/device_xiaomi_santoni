@@ -23,13 +23,16 @@ DEVICE_PATH := device/xiaomi/santoni
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
+TARGET_USES_MEDIA_EXTENSIONS := true
 TARGET_TS_MAKEUP := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_santoni_defconfig
+TARGET_KERNEL_CONFIG := santoni_defconfig
 
-# Libinit
-TARGET_LIBINIT_MSM8937_DEFINES_FILE := $(DEVICE_PATH)/libinit/init_santoni.cpp
+# Init
+TARGET_INIT_VENDOR_LIB         := libinit_santoni
+TARGET_PLATFORM_DEVICE_BASE    := /devices/soc/
+TARGET_RECOVERY_DEVICE_MODULES := libinit_santoni
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-06-01

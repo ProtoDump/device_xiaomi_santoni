@@ -3,11 +3,11 @@ LOCAL_PATH := $(call my-dir)
 # Device init scripts
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.santoni.rc
+LOCAL_MODULE       := init.device.rc
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := init.santoni.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
+LOCAL_SRC_FILES    := init.device.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 # Configuration scripts
