@@ -33,6 +33,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 #include <sys/sysinfo.h>
 
 #include <android-base/file.h>
@@ -50,6 +52,16 @@ char const *heapgrowthlimit;
 char const *heapsize;
 char const *heapminfree;
 char const *heapmaxfree;
+
+static void property_override(char const prop[], char const value[]) {
+    prop_info *pi;
+
+    pi = (prop_info*) __system_property_find(prop);
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+}
 
 void check_device()
 {
@@ -97,9 +109,7 @@ void init_target_properties()
     fin.close();
 
     if (buf.find("S88536CA2") != std::string::npos) {
-        property_set("ro.product.model", "Redmi 4");
-    } else {
-        property_set("ro.product.model", "Redmi 4X");
+        property_override("ro.product.model", "Redmi 4");
     }
 }
 

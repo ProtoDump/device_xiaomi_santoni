@@ -27,6 +27,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, device/xiaomi/santoni/device.mk)
 
 PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Redmi 4X
 PRODUCT_DEVICE := santoni
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_NAME := lineage_santoni
@@ -39,6 +40,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="santoni-user 7.1.2 N2G47H V9.2.1.0.NAMCNEK release-keys"
 
 BUILD_FINGERPRINT := Xiaomi/santoni/santoni:7.1.2/N2G47H/V9.2.1.0.NAMCNEK:user/release-keys
-
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.product.model
