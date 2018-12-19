@@ -29,6 +29,10 @@ PRODUCT_PACKAGES += \
     camera.msm8937 \
     libmm-qcamera
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service.custom
+
 # Init scripts
 PRODUCT_PACKAGES += \
     init.device.rc \
