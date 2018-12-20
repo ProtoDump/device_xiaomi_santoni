@@ -58,6 +58,9 @@ endif
 # System header file path prefix
 LOCAL_CFLAGS += -DSYSTEM_HEADER_PREFIX=sys
 
+# Kernel headers
+LOCAL_CFLAGS += -DCONFIG_MACH_XIAOMI_SANTONI
+
 LOCAL_SRC_FILES := \
     src/mm_jpeg_queue.c \
     src/mm_jpeg_exif.c \
