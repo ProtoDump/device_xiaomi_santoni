@@ -279,3 +279,7 @@ lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
 lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
 lib64/libfp_client.so:vendor/lib64/libfp_client.so
 lib64/libfpservice.so:vendor/lib64/libfpservice.so
+
+# Touchscreen
+etc/ft5336_oufei_720p.ini:vendor/etc/ft5336_oufei_720p.ini
+etc/ft5336_biel_1080p.ini:vendor/etc/ft5336_biel_1080p.ini
