@@ -8,6 +8,9 @@ init_daemon_domain(init_goodix)
 allow init_goodix vendor_shell_exec:file rx_file_perms;
 allow init_goodix vendor_toolbox_exec:file rx_file_perms;
 
+# This is disgusting but we need to run as root
+allow init_goodix self:capability dac_override;
+
 # Allow to delete file
 allow init_goodix { persist_file mnt_vendor_file }:dir search;
 allow init_goodix persist_drm_file:dir create_dir_perms;
