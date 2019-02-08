@@ -1,3 +1,0 @@
-type baseband_prop, property_type;
-allow system_app baseband_prop:file open;
-allow system_app baseband_prop:file getattr;

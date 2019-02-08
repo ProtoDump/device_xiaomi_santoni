@@ -25,20 +25,16 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on boot
-    start baseband-sh
-
-service baseband-sh /vendor/bin/sh /vendor/etc/set_baseband.sh
-    class late_start
-    user root
-    oneshot
-    disabled
-
 #start camera server as daemon
 service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
+
+service baseband-sh /vendor/bin/init.baseband.sh
+    class late_start
+    user root
+    oneshot
 
 service goodix_script /vendor/bin/init.goodix.sh
     class late_start

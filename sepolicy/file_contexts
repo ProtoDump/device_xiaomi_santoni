@@ -1,5 +1,3 @@
-# Baseband
-/(vendor|system/vendor)/etc/set_baseband.sh                         u:object_r:set_baseband_exec:s0
-
-# Shell Script
+# Shell scripts
+/(vendor|system/vendor)/bin/init\.baseband\.sh          u:object_r:init_baseband_exec:s0
 /(vendor|system/vendor)/bin/init\.goodix\.sh		u:object_r:init_goodix_exec:s0
