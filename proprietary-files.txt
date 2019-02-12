@@ -271,9 +271,9 @@ etc/qdcm_calib_data_ili9881c_HD720p_video_EbbgDJN.xml:vendor/etc/qdcm_calib_data
 # Fingerprint
 bin/gx_fpcmd:vendor/bin/gx_fpcmd
 bin/gx_fpd:vendor/bin/gx_fpd
-lib/hw/fingerprint.default.so:vendor/lib/hw/fingerprint.msm8937.so
+lib/hw/fingerprint.default.so:vendor/lib/hw/fingerprint.msm8937.so|6d9cd9ae2e8c5c60637a87e77dd04b465c4cffaa
 lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so
-lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so
+lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so|28a7f4a29eb51c07956a9010bc037bb2a862e9d2
 lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.so
 lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
 lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
