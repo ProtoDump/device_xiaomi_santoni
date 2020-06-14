@@ -17,13 +17,8 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := fingerprint.msm8937
 
-ifeq ($(TARGET_KERNEL_VERSION), 4.9)
-LOCAL_SRC_FILES_64 := arm64/fingerprint.msm8937_4.9.so
-LOCAL_SRC_FILES_32 := arm/fingerprint.msm8937_4.9.so
-else
 LOCAL_SRC_FILES_64 := arm64/fingerprint.msm8937.so
 LOCAL_SRC_FILES_32 := arm/fingerprint.msm8937.so
-endif
 
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MULTILIB := both
