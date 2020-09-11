@@ -33,7 +33,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.custom \
     fingerprint.msm8937 \
-    libunwind
+    libunwind \
+    libbacktrace-vendor
 
 # Init scripts
 PRODUCT_PACKAGES += \
