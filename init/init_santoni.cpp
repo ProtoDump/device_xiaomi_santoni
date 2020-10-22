@@ -45,7 +45,6 @@
 #include "vendor_init.h"
 
 using android::base::GetProperty;
-using android::init::property_set;
 
 typedef struct {
     char const *heapstartsize;
@@ -121,12 +120,12 @@ void vendor_load_properties() {
     dalvikprop_t dprop;
     check_device(&dprop);
 
-    property_set("dalvik.vm.heapstartsize", dprop.heapstartsize);
-    property_set("dalvik.vm.heapgrowthlimit", dprop.heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", dprop.heapsize);
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", dprop.heapminfree);
-    property_set("dalvik.vm.heapmaxfree", dprop.heapmaxfree);
+    property_override("dalvik.vm.heapstartsize", dprop.heapstartsize);
+    property_override("dalvik.vm.heapgrowthlimit", dprop.heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", dprop.heapsize);
+    property_override("dalvik.vm.heaptargetutilization", "0.75");
+    property_override("dalvik.vm.heapminfree", dprop.heapminfree);
+    property_override("dalvik.vm.heapmaxfree", dprop.heapmaxfree);
 
     init_target_properties();
 }
